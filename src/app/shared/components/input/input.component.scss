@@ -1,0 +1,33 @@
+@import "../../../shared/styles/colors.scss";
+
+:host {
+  .input {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    &__label {
+      font-size: 16px;
+    }
+
+    &__field {
+      padding: 12px 16px;
+      box-sizing: border-box;
+      border: 1px solid $gray-color-a2;
+
+      &:focus {
+        outline: none;
+        border: 1px solid $primary-color;
+      }
+
+      &::placeholder {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19px;
+        color: $text-gray-color;
+      }
+    }
+  }
+}
