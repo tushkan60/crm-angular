@@ -1,0 +1,15 @@
+<button
+  class="button button--{{ variant }}"
+  [disabled]="disabled"
+  (click)="onClick()"
+>
+  <ng-container *ngIf="icon && !isIconOnRight">
+    <app-icon [name]="icon"></app-icon>
+  </ng-container>
+
+  {{ label }}
+
+  <ng-container *ngIf="icon && isIconOnRight">
+    <app-icon [name]="icon"></app-icon>
+  </ng-container>
+</button>
