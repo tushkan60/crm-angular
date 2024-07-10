@@ -1,10 +1,11 @@
 <header class="header">
   <div class="header__container">
     <span class="header__logo">skb.</span>
-    <app-input class="header__input"
-               [type]="InputEnum.Text"
-               placeholder="Введите запрос"
-               (valueChange)="onValueChange($event)"
+    <app-input
+      class="header__input"
+      [type]="InputEnum.Text"
+      placeholder="Введите запрос"
+      (valueChange)="onValueChange($event)"
     >
     </app-input>
   </div>

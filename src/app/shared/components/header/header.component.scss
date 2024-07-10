@@ -3,13 +3,16 @@
 :host {
   .header {
     &__container {
+      position: relative;
+      z-index: 1;
       display: flex;
       justify-content: flex-start;
       align-items: center;
       gap: 53px;
       padding: 20px;
-      box-shadow: 0 3.39px 5.64px 0 $gray-color-a,0 9.03px 27.09px 0 $gray-color-a;
+      box-shadow: 0 3.39px 5.64px 0 $gray-color-a, 0 9.03px 27.09px 0 $gray-color-a;
     }
+
     &__logo {
       display: flex;
       align-items: center;
@@ -25,6 +28,7 @@
       background-color: $primary-color;
       border-radius: 50%;
     }
+
     &__input {
       width: 580px;
     }
