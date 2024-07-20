@@ -11,15 +11,16 @@ import { NgForOf } from '@angular/common';
 })
 export class ClientsComponent {
   columns = [
-    { label: 'ID', field: 'id' },
+    { label: 'ID', field: 'id', isSortable: true },
     {
       label: 'Фамилия Имя Отчество',
       field: 'name',
+      isSortable: true,
     },
-    { label: 'Дата и время создания', field: 'created_at' },
-    { label: 'Последние изменения', field: 'updated_at' },
-    { label: 'Контакты', field: 'contacts' },
-    { label: 'Действия', field: 'actions' },
+    { label: 'Дата и время создания', field: 'created_at', isSortable: true },
+    { label: 'Последние изменения', field: 'updated_at', isSortable: true },
+    { label: 'Контакты', field: 'contacts', isSortable: false },
+    { label: 'Действия', field: 'actions', isSortable: false },
   ];
 
   sortBy(field: string): void {

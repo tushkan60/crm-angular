@@ -3,14 +3,16 @@
     <span class="clients__title">Клиенты</span>
     <div class="clients__header">
       <ul class="clients__columns">
-        <li *ngFor="let column of columns" class="clients__columns-title">
-          <app-button
-            [label]="column.label"
-            icon="arrow"
-            [isIconOnRight]="true"
-            (clicked)="sortBy(column.field)"
-          ></app-button>
-        </li>
+        @for (column of columns; track $index) {
+          <li class="clients__columns-title">
+            <app-button
+              [label]="column.label"
+              [icon]="column.isSortable ? 'arrow' : ''"
+              [isIconOnRight]="true"
+              (clicked)="sortBy(column.field)"
+            ></app-button>
+          </li>
+        }
       </ul>
     </div>
     <div class="clients__table"></div>

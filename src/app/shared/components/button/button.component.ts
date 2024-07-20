@@ -1,6 +1,6 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {IconComponent} from "../icon/icon.component";
+import { IconComponent } from '../icon/icon.component';
 
 @Component({
   selector: 'app-button',
@@ -10,14 +10,19 @@ import {IconComponent} from "../icon/icon.component";
   styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
-  @Input() label = 'Button';
-  @Input() disabled = false;
-  @Input() variant: 'primary' | 'secondary' | 'danger' = 'primary';
-  @Input() outline = true;
-  @Input() isIconOnRight = false;
-  @Input() icon?: string;
+  label = input<string>('Button');
 
-  @Output() clicked = new EventEmitter<void>();
+  disabled = input<boolean>(false);
+
+  variant = input<'primary' | 'secondary' | 'danger'>('primary');
+
+  outline = input<boolean>(false);
+
+  isIconOnRight = input<boolean>(false);
+
+  icon = input<string>('');
+
+  clicked = output<void>();
 
   onClick(): void {
     this.clicked.emit();

@@ -1,27 +1,6 @@
 <span class="icon">
-  <svg *ngIf="name === 'home'" class="icon__svg" viewBox="0 0 24 24">
-    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-  </svg>
-
-  <svg *ngIf="name === 'settings'" class="icon__svg" viewBox="0 0 24 24">
-    <path
-      d="M19.14 12.94l1.43-1.43a8.37 8.37 0 000-1.1l-1.43-1.43-1.15 1.15a5.97 5.97 0 00-1.45-.85l-.2-1.62h-1.84l-.2 1.62a5.97 5.97 0 00-1.45.85L7.43 9.94 6 11.37a8.37 8.37 0 000 1.1l1.43 1.43 1.15-1.15a5.97 5.97 0 001.45.85l.2 1.62h1.84l.2-1.62a5.97 5.97 0 001.45-.85l1.15 1.15z"
-    />
-    <circle cx="12" cy="12" r="3" />
-  </svg>
-
-  <svg *ngIf="name === 'user'" class="icon__svg" viewBox="0 0 24 24">
-    <path d="M12 12c2.67 0 8 1.34 8 4v2H4v-2c0-2.66 5.33-4 8-4zm0-2a4 4 0 110-8 4 4 0 010 8z" />
-  </svg>
-
-  <svg
-    *ngIf="name === 'arrow'"
-    width="8"
-    height="8"
-    viewBox="0 0 8 8"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  @if (name() === 'arrow') {
+  <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       id="Vector"
       d="M0 4L0.7 4.7L3.5 1.91L3.5 8L4.5 8L4.5 1.91L7.28 4.7L8 4L4 0L0 4Z"
@@ -30,15 +9,8 @@
       fill-rule="nonzero"
     />
   </svg>
-
-  <svg
-    *ngIf="name === 'addIcon'"
-    width="22"
-    height="16"
-    viewBox="0 0 22 16"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  } @if (name() === 'addIcon') {
+  <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       id="Vector"
       d="M14 8C16.2 8 18 6.2 18 4C18 1.79 16.2 0 14 0C11.79 0 10 1.79 10 4C10 6.2 11.79 8 14 8ZM5 6L5 3L3 3L3 6L0 6L0 8L3 8L3 11L5 11L5 8L8 8L8 6L5 6ZM14 10C11.33 10 6 11.33 6 14L6 16L22 16L22 14C22 11.33 16.67 10 14 10Z"
@@ -47,4 +19,5 @@
       fill-rule="nonzero"
     />
   </svg>
+  }
 </span>
